@@ -86,11 +86,11 @@ export default class Enhancer implements IEnhancer {
     }
 
     // webpack HMR
-    // if ((<any>module) && (<any>module).hot) {
-    //   const retaxLib = require('retax');
-    //   (<any>module).hot.accept();
-    //   retaxLib.retax.reload();
-    // }
+    if ((<any>module) && (<any>module).hot) {
+      const retaxLib = require('retax');
+      (<any>module).hot.accept();
+      retaxLib.retax.reload();
+    }
 
     return hoistNonReactStatic(RetaxComponent, ComposedComponent);
   }
