@@ -1,8 +1,11 @@
 import 'reflect-metadata';
+import { retaxKernel } from 'retax';
+import { componentsModule, ANNOTATOR } from './inversify';
+import { IAnnotator } from './annotator';
 
-export * from './actionsCreator';
-export * from './api';
-export * from './annotator';
-export * from './enhancer';
-export * from './inversify';
-export * from './lifecycle';
+retaxKernel.load(componentsModule);
+
+export const annotator = retaxKernel.get<IAnnotator>(ANNOTATOR);
+export { AbstractActionsCreator } from './actionsCreator';
+export { AbstractApi } from './api';
+export { AbstractLifecycleManager } from './lifecycle';
