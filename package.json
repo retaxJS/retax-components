@@ -1,6 +1,6 @@
 {
   "name": "retax-components",
-  "version": "0.0.0-alpha.3",
+  "version": "0.0.0-alpha.4",
   "description": "Set of components to structure retax apps",
   "main": "lib/index.js",
   "jsnext:main": "es/index.js",
