@@ -18,7 +18,7 @@ export default function componentsModule(kernel: IKernel): void {
   kernel.bind<IAnnotator>(ANNOTATOR).to(Annotator);
   kernel.bind<IEnhancer>(ENHANCER).to(Enhancer);
 
-  kernel.bind<typeof AbstractApi>(API_CONSTRUCTOR).toValue(AbstractApi);
-  kernel.bind<typeof AbstractActionsCreator>(ACTIONS_CREATOR_CONSTRUCTOR).toValue(AbstractActionsCreator);
-  kernel.bind<typeof AbstractLifecycleManager>(LIFECYCLE_MANAGER_CONSTRUCTOR).toValue(AbstractLifecycleManager);
+  kernel.bind<typeof AbstractApi>(API_CONSTRUCTOR).toConstantValue(AbstractApi);
+  kernel.bind<typeof AbstractActionsCreator>(ACTIONS_CREATOR_CONSTRUCTOR).toConstantValue(AbstractActionsCreator);
+  kernel.bind<typeof AbstractLifecycleManager>(LIFECYCLE_MANAGER_CONSTRUCTOR).toConstantValue(AbstractLifecycleManager);
 }
