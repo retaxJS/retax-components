@@ -1,4 +1,3 @@
-import 'reflect-metadata';
 import { retaxKernel } from 'retax';
 import { componentsModule, ANNOTATOR } from './inversify';
 import { IAnnotator } from './annotator';
