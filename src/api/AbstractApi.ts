@@ -116,7 +116,13 @@ abstract class AbstractApi implements IApi {
   private _makeFullUrl(
     { url, filters }: IUrlConfig = {}
   ): string {
-    return `${this.baseUrl}${url}?Filter=${JSON.stringify(filters)}`;
+    let filter = '';
+
+    if (filters) {
+      filter = `?Filter=${JSON.stringify(filters)}`;
+    }
+
+    return `${this.baseUrl}${url}${filter}`;
   }
 }
 
