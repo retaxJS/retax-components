@@ -39,6 +39,7 @@
     "builder-ts-library": "~0.0.6",
     "hoist-non-react-statics": "^1.0.5",
     "inversify": "^2.0.0-beta.2",
+    "inversify-dts": "^1.0.0",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.6.1",
     "retax-core": "^1.1.0",
