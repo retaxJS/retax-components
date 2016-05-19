@@ -50,6 +50,10 @@ abstract class AbstractApi implements IApi {
     return this._abstractMethod<T>(HTTP_METHODS.PUT, config);
   }
 
+  public delete<T>(config: IMethodConfig): Promise<T> {
+    return this._abstractMethod<T>(HTTP_METHODS.DELETE, config);
+  }
+
   private async _abstractMethod<T>(
     method: HttpMethod,
     { url, filters, body, headers }: IMethodConfig

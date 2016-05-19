@@ -26,4 +26,5 @@ export interface IApi extends IApiService {
   get<T>(config: IMethodConfig): Promise<T>;
   post<T>(config: IMethodConfig): Promise<T>;
   put<T>(config: IMethodConfig): Promise<T>;
+  delete<T>(config: IMethodConfig): Promise<T>;
 }
