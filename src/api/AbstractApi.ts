@@ -1,3 +1,4 @@
+import { injectable } from 'inversify';
 import 'isomorphic-fetch';
 
 import {
@@ -18,6 +19,7 @@ import {
   IRoutesMap, IApiServiceRuntimeConfig,
 } from 'retax-core';
 
+@injectable()
 abstract class AbstractApi implements IApi {
   public routes: IRoutesMap;
   public baseUrl: string;

@@ -1,3 +1,6 @@
+import { injectable } from 'inversify';
+
+
 import { ILifecycleManager } from './interfaces';
 
 import {
@@ -7,6 +10,7 @@ import {
 
 import { IAction } from 'retax-utils';
 
+@injectable()
 abstract class AbstractLifecycleManager implements ILifecycleManager {
   public apis: IUserServiceMap;
   public actionsCreators: IUserServiceMap;

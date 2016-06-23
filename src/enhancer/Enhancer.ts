@@ -67,6 +67,7 @@ export default class Enhancer implements IEnhancer {
     config: IComponentEnhancmentConfig
   ): typeof RetaxConsumer {
 
+    @injectable()
     class RetaxComponent extends RetaxConsumer<void, void> {
       public static displayName: string = `WithServices(${ComposedComponent.displayName || 'Nameless'})`;
 

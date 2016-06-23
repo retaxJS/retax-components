@@ -1,3 +1,5 @@
+import { injectable } from 'inversify';
+
 import { IActionsCreator, IExportReturn } from './interfaces';
 
 import {
@@ -7,6 +9,7 @@ import {
 
 import { METADATA_KEYS } from '../annotator';
 
+@injectable()
 abstract class AbstractActionsCreator implements IActionsCreator {
   public apis: IUserServiceMap;
   public actionsCreators: IUserServiceMap;
